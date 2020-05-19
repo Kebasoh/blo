@@ -31,7 +31,7 @@ def create_app(config_name):
     
     app.config['SECRET_KEY'] = 'WOW'
     print(app.config['SQLALCHEMY_DATABASE_URI'])
-    app.config['DEBUG']=True
+    app.config['DEBUG']=False
     db.init_app(app)
     bcrypt.init_app(app)
     login_manager.init_app(app)
